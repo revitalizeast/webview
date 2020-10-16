@@ -24,6 +24,7 @@ url_path = "https://revitalizeast.github.io/webview/index.html"
 # 1) 提取当前文件夹的文件信息,不包含子文件夹信息和不必要的文件
 array_fn_title =[]
 array_title=[]
+print("The available list:")
 for fn in os.listdir("."):
     if (not os.path.isdir(fn)
         and not fn == "index.html"
@@ -39,7 +40,7 @@ try:
     url_str = url_req.read().decode()
     url_strlist = url_str.split("\n")
     #print(url_strlist)
-    print("The available list:")
+    print("The existed list:")
     for str_item in url_strlist:
         str_item = str_item.strip()
         # <a href="dangerous.txt">200922_094011 dangerous.txt</a>
@@ -56,7 +57,7 @@ except:
 def keyTitle(elem):
     return elem[1]
 array_fn_title.sort(key=keyTitle, reverse=True)
-print("The current list:")
+print("The combined list:")
 for (fn,fn_title) in array_fn_title:
     print(fn_title)
 
