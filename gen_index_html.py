@@ -33,6 +33,7 @@ for fn in os.listdir("."):
         fn_title    = fn_time_str + " " + fn
         array_fn_title.append((fn, fn_title))
         array_title.append(fn_title)
+        print(fn_title)
 
 # 2) 提取已有文件信息
 try:
