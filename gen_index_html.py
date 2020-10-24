@@ -67,10 +67,10 @@ fp = open("index.html","w",encoding="utf-8")
 fp.write("<html>" + "\n")
 fp.write("<head>" + "\n")
 fp.write('<meta charset="utf-8">' + "\n")
-fp.write('<title>随便看看啦</title>' + "\n")
+fp.write('<title>see see la</title>' + "\n")
 fp.write('</head>' + "\n")
 fp.write('<body>'+ "\n")
-fp.write('<h1>随便看看啦，注意有些分拆后的mp4在PC下载看更好，在手机看一般无问题</h1>' + "\n")
+fp.write('<h1>分拆后的.mp4适合手机，若PC先下载再看更好</h1>' + "\n")
 fp.write('<p></p>' + "\n")
 
 for (fn,fn_title) in array_fn_title:
