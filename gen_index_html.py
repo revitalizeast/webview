@@ -11,6 +11,7 @@
     <p></p>
 </body>
 </html>
+
 1)提取当前文件夹内所有文件的路径和时间信息,按照时间信息排序
 2)从指定URL提取已有的文件信息
 3)重新生成index.html文件
@@ -79,3 +80,5 @@ for (fn,fn_title) in array_fn_title:
 fp.write('</body>'+ "\n")
 fp.write("</html>" + "\n")
 fp.close()
+
+
