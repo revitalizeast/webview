@@ -11,7 +11,6 @@
     <p></p>
 </body>
 </html>
-
 1)提取当前文件夹内所有文件的路径和时间信息,按照时间信息排序
 2)从指定URL提取已有的文件信息
 3)重新生成index.html文件
@@ -41,7 +40,7 @@ try:
     url_str = url_req.read().decode()
     url_strlist = url_str.split("\n")
     #print(url_strlist)
-    print("The existed list:")
+    #print("The existed list:")
     for str_item in url_strlist:
         str_item = str_item.strip()
         # <a href="dangerous.txt">200922_094011 dangerous.txt</a>
@@ -49,7 +48,7 @@ try:
             fn_title = str_item.split(">")[1].split("<")[0]
             if array_title.count(fn_title) == 0:
                 fn = str_item.split('"')[1].split('"')[0]
-                print(fn_title)
+                #print(fn_title)
                 array_fn_title.append((fn,fn_title))
 except:
     print("No index.html")
@@ -58,9 +57,9 @@ except:
 def keyTitle(elem):
     return elem[1]
 array_fn_title.sort(key=keyTitle, reverse=True)
-print("The combined list:")
-for (fn,fn_title) in array_fn_title:
-    print(fn_title)
+#print("The combined list:")
+#for (fn,fn_title) in array_fn_title:
+    #print(fn_title)
 
 #4) 生成文件
 fp = open("index.html","w",encoding="utf-8")
@@ -80,5 +79,3 @@ for (fn,fn_title) in array_fn_title:
 fp.write('</body>'+ "\n")
 fp.write("</html>" + "\n")
 fp.close()
-
-
