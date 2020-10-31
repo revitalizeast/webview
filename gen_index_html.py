@@ -80,5 +80,3 @@ for (fn,fn_title) in array_fn_title:
 fp.write('</body>'+ "\n")
 fp.write("</html>" + "\n")
 fp.close()
-
-
